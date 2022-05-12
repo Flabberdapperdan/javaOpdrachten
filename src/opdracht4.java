@@ -8,7 +8,7 @@ public class opdracht4 {
 	}
 }
 
-//opdracht4
+//opdracht4 //deze klopt nog niet!!!!!!!!
 class ArraySorter{
 	double[] sorter() {
 		double[] raw = new double[10];
