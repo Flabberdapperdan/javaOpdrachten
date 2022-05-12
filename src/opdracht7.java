@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
-
 
 class opdracht7{
 	public static void main(String[] args) {
@@ -14,24 +12,19 @@ class opdracht7{
 class Lingo{
 	String secretWord = "appel";
 	boolean won = false;
+	Scanner sc = new Scanner(System.in);
 	
 	void newRound() {
-		if (this.won == false) {
+		if (!this.won) {
 			String input = newInput();
 			int[] outcome = inputChecker(this.secretWord, input);
 			winChecker(outcome);
-			if (!this.won) {
-				System.out.println("Almost! Try again: ");
-				newRound();				
-			} else {
-				System.out.println("Do you wanne play another round!");
-			}
+			System.out.println("Almost! Try again: ");
+			newRound();				
 		}
 	}
 	String newInput() {
-		Scanner sc = new Scanner(System.in);
 		String userInput = sc.nextLine();
-		sc.close();
 		return userInput;
 	}
 	int[] inputChecker(String secret, String input) {
